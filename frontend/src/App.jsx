@@ -89,7 +89,7 @@ function App() {
 
   useEffect(() => {
     if (username && isEditorReady && editorRef.current) {
-      const provider = new SocketIOProvider("http://localhost:3000", "monaco", ydoc, { autoConnect: true });
+      const provider = new SocketIOProvider("/", "monaco", ydoc, { autoConnect: true });
       providerRef.current = provider;
 
       const userColor = theme === 'dark' ? '#C4B5FD' : '#BAE6FD'; 
